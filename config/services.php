@@ -35,4 +35,24 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    /**
+     * Google OAuth
+     * https://console.developers.google.com
+     */
+    'google' => [
+        'client_id' => env('GOOGLE_OAUTH_CLIENT_ID'),
+        'client_secret' => env('GOOGLE_OAUTH_CLIENT_SECRET'),
+        'redirect' => env('GOOGLE_OAUTH_REDIRECT'),
+    ],
+
+    /**
+     * Github OAuth
+     * https://github.com/settings/applications/new
+     */
+    'github' => [
+        'client_id' => env('GITHUB_OAUTH_CLIENT_ID'),
+        'client_secret' => env('GITHUB_OAUTH_CLIENT_SECRET'),
+        'redirect' => env('GITHUB_OAUTH_REDIRECT'),
+    ],
+
 ];
