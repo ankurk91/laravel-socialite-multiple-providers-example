@@ -32,13 +32,14 @@ class SocialiteController extends Controller
      *
      * @param $provider string
      * @throws \Exception
+     * @throws \Throwable     
      * @return \Illuminate\Http\RedirectResponse
      */
     public function handleProviderCallback($provider)
     {
         try {
             $providerUser = Socialite::driver($provider)->user();
-        } catch (\Exception $e) {
+        } catch (\Throwable | \Exception $e) {
             // Send actual error message in development
             if (config('app.debug')) {
                 throw $e;
